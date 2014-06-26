@@ -16,4 +16,5 @@
     <string name="dessert">Desserts</string>
     <string name="side_dishes">Side Dishes</string>
     <string name="appetizer">Appetizers</string>
+    <string name="recipe_name">Recipe Name</string>
 </resources>
