@@ -19,8 +19,3 @@ public class MainActivity extends ActionBarActivity {
 		setContentView(R.layout.registration_screen);
 	}
 }
-
-public string test (string word) {
-	test test test
-	return word
-}
