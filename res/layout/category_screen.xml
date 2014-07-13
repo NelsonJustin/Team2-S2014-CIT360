@@ -1,72 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#2B2B24"
     android:focusable="false"
-    android:focusableInTouchMode="false">
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textSize="75sp"
-    android:typeface="monospace"
-    android:text="@string/category_label"
-    android:inputType="text"
-    android:background="#FF0000"
-    android:textColor="#FFFFFF"
-    android:textStyle="bold"
-    android:id="@+id/textView" />
-<FrameLayout
-    android:layout_width="60sp"
-    android:layout_height="60sp"
-    android:layout_marginLeft="575sp"
-    android:layout_marginTop="15sp"
-    android:id="@+id/relativeLayout">
+    android:focusableInTouchMode="false"
+    android:orientation="vertical" >
 
-    <ImageButton
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/add_icon"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:id="@+id/add_button" />
+        android:background="#FF0000"
+        android:text="@string/category_label"
+        android:textColor="#FFFFFF"
+        android:textSize="75sp"
+        android:textStyle="bold"
+        android:typeface="monospace" />
 
-</FrameLayout>
-
-    <ImageButton
+    <FrameLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="60sp"
         android:layout_height="60sp"
+        android:layout_marginLeft="575sp"
+        android:layout_marginTop="15sp" >
+
+        <ImageButton
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/add_icon"
+            android:onClick="manageCategory" />
+    </FrameLayout>
+
+    <ImageButton
         android:id="@+id/delete_button"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
         android:layout_alignTop="@+id/relativeLayout"
-        android:layout_toRightOf="@+id/relativeLayout"
         android:layout_marginLeft="50sp"
-        android:background="@drawable/delete_icon"/>
+        android:layout_toRightOf="@+id/relativeLayout"
+        android:background="@drawable/delete_icon"
+        android:onClick="manageCategory" />
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="180sp"
-    android:layout_alignParentBottom="true"
-    android:background="#2B2B24">
-
-    <ImageButton
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="180sp"
-        android:layout_width="266sp"
-        android:background="@drawable/menu_button1"
+        android:layout_alignParentBottom="true"
+        android:background="#2B2B24" >
 
-        />
+        <ImageButton
+            android:layout_width="266sp"
+            android:layout_height="180sp"
+            android:background="@drawable/menu_button1" />
 
-    <ImageButton
-        android:layout_height="180sp"
-        android:layout_width="266sp"
-        android:background="@drawable/menu_button2"
-        />
+        <ImageButton
+            android:layout_width="266sp"
+            android:layout_height="180sp"
+            android:background="@drawable/menu_button2" />
 
-    <ImageButton
-        android:layout_height="180sp"
-        android:layout_width="266sp"
-        android:background="@drawable/menu_button3"
-        />
-
+        <ImageButton
+            android:layout_width="266sp"
+            android:layout_height="180sp"
+            android:background="@drawable/menu_button3" />
     </LinearLayout>
+
+    <ListView
+        android:id="@+id/category_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout1"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" >
+    </ListView>
+
 </RelativeLayout>
