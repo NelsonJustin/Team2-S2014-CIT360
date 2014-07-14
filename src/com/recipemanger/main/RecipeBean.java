@@ -1,9 +1,14 @@
-package com.recipemanager;
+package com.example.myrecipemanager;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-public class RecipeBean {
+public class RecipeBean implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int recipeId;
 	private String recipeName;
 	private String ingredients;

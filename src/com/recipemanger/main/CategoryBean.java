@@ -1,9 +1,13 @@
-package com.recipemanager;
+package com.example.myrecipemanager;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-public class CategoryBean {
-
+public class CategoryBean implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int categoryId;
 	private String categoryName;
 	private Date creationDate;
